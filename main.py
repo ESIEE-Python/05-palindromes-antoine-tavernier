@@ -1,11 +1,11 @@
-#### Fonction secondaire
-
-
+"""C'est une fonction palindrome"""
 def ispalindrome(p):
-
-    # votre code ici
-    
-    return False
+    """ Fonction qui vérifie si c'est un palindrome"""
+    accent          = "éèêëàâäîïôöùûüç-.:?!,';_"
+    sansaccent      = "eeeeaaaiioouuuc         "
+    p = p.lower()
+    p = p.translate(str.maketrans(accent , sansaccent)).replace(" ","")    
+    return p == p [::-1]
 
 #### Fonction principale
 
